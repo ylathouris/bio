@@ -61,3 +61,13 @@ import bio
 with bio.profiler("/path/to/file.prof"):
     # Do stuff here
 ```
+
+</br>
+
+### <a name="testing"></a>Testing
+
+Bio uses `tox` for testing. To run the tests, simply run:
+
+```
+tox
+```
