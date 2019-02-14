@@ -1,19 +1,6 @@
 version: 2
 jobs:
-  py36test:
-    docker:
-      - image: python:3.6
-
-    working_directory: ~/bio
-
-    steps:
-      - checkout
-
-      - run:
-          name: run tests
-          command: pip install tox && tox
-
-  py37test:
+  toxify:
     docker:
       - image: python:3.7
 
@@ -31,4 +18,4 @@ workflows:
 
   bio:
     jobs:
-      - py37test
+      - toxify
